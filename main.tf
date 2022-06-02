@@ -26,16 +26,16 @@ terraform {
 
 provider "aws" {
   region = local.vpc_region_primary
-  assume_role {
-    role_arn = "arn:aws:iam::711129375688:role/consul-vault-failover"
+  #assume_role {
+    #role_arn = "arn:aws:iam::711129375688:role/consul-vault-failover"
   }
 }
 
 provider "aws" {
   alias = "us_east_1"
   region = local.vpc_region_secondary
-  assume_role {
-    role_arn = "arn:aws:iam::711129375688:role/consul-vault-failover"
+  #assume_role {
+    #role_arn = "arn:aws:iam::711129375688:role/consul-vault-failover"
   }
 }
 
